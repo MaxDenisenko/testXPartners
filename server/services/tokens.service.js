@@ -31,7 +31,7 @@ class TokenService {
 
     validateAccessToken (token) {
         try {
-            const tokenData = jwt.verify(token,process.env.JWT_ACCESH_TOKEN)
+            const tokenData = jwt.verify(token,process.env.JWT_ACCESS_TOKEN)
             return tokenData
         } catch (e) {
             return null
@@ -40,7 +40,7 @@ class TokenService {
 
     validateRefreshToken (token) {
         try {
-            const tokenData = jwt.verify(token,process.env.JWT_REFRESS_TOKEN)
+            const tokenData = jwt.verify(token,process.env.JWT_REFRESH_TOKEN)
             return tokenData
         } catch (e) {
             return null

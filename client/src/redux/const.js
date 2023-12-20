@@ -1,0 +1,5 @@
+export const AUTH_DATA_USER = 'AUTH_DATA_USER'
+export const AUTH_LOGOUT = 'AUTH_LOGOUT'
+export const DATA_USER = 'DATA_USER'
+export const LOADING = 'LOADING'
+export const HAS_ERROR = 'HAS_ERROR'

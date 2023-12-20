@@ -4,6 +4,6 @@ const authMidleware = require('../middleware/auth.midleware')
 
 const router = new Routes()
 
-router.post('/user', getUser)
+router.post('/user',authMidleware, getUser)
 
 module.exports = router
