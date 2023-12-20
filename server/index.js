@@ -7,6 +7,7 @@ const UsersRoutes = require('./routes/users.routes')
 const cors = require('cors')
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
+const fileUpload = require('express-fileupload')
 const errorMiddleware = require('./middleware/error.midleware')
 
 const app = express();
@@ -19,6 +20,8 @@ app.use(cors({
   credentials: true,
   origin: process.env.CLIENT_DEV_URL
 }))
+app.use(fileUpload())
+app.use(express.static('static'))
 app.use('/api',RegistrationRoutes, LoginRoutes, LogoutRoutes, UsersRoutes)
 app.use(errorMiddleware)
 const startApp = async() => {
